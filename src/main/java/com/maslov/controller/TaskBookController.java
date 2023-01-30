@@ -27,7 +27,7 @@ public class TaskBookController {
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public String newItem(TaskItem item){
-        if(!item.getName().equalsIgnoreCase("")){
+        if(item.getName().length() > 3){
             repository.save(item);
             return "redirect:/";
         }
