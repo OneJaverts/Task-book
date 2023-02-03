@@ -10,9 +10,11 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name = "username")
+
+
+    @Column( name = "username")
     private String username;
-    @Column(name = "password")
+    @Column( name = "password")
     private String password;
     @Transient
     private String confirmPassword;
@@ -59,5 +61,8 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public User() {
     }
 }

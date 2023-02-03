@@ -16,11 +16,16 @@ public class Role {
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
 
+    public Role() {
+    }
+
     public Long getId() {
         return Id;
     }
 
-    public Role() {
+    public Role(Long id, String name) {
+        this.Id = id;
+        this.name = name;
     }
 
     public void setId(Long id) {

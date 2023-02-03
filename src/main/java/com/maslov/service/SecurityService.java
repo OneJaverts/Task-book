@@ -1,7 +1,9 @@
 package com.maslov.service;
 
+import com.maslov.entity.User;
+
 public interface SecurityService {
 
     String findLoggedInUsername();
-    void autoLogin(String username, String password);
+    void autoLogin(User user);
 }
